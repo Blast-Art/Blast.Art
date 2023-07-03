@@ -33,12 +33,19 @@ $sea-green: #0d813cff;
 $turquoise: #2cd8bcff;
 $lime-green: #4ad13fff;
 */
-svg {
+
+/*menu*/
+
+
+
+/*end menu*/
+/*svg {
 	width: 100%;
 	height: 100%;
-}
+}*/
 .fade-box {
-	margin-top:30%;
+	margin-top:35%;
+  margin-right:5%;
 }
 /*text fadein*/
 p.fadeIn span{
@@ -73,11 +80,12 @@ p.fadeIn span:nth-of-type(4){
 			min-height:80vw;
 			padding:10px;
 			text-align: center;
-			/*background-repeat: no-repeat;
+			background-repeat: no-repeat;
   background-size: 100%;
-  background: rgb(255,255,255);
-			background: linear-gradient(275deg, rgba(255,255,255,1) 50%, rgba(242,40,197,1) 100%);*/
 
+  /*background: rgb(255,255,255);
+			background: linear-gradient(275deg, rgba(255,255,255,1) 50%, rgba(242,40,197,1) 100%);
+*/
 		}
 		.top span{
 			color: black;
@@ -85,11 +93,13 @@ p.fadeIn span:nth-of-type(4){
 		.top-insert{
 			background-image: url("BlastSVGcolor.png");
 			min-height:80vw;
-			padding:20px;
-			padding-left:40px;
+			padding:0px;
+			padding-left:0px;
 			text-align: center;
 			background-repeat: no-repeat;
   background-size: 100%;
+  margin-left: 70px;
+  margin-top: 0px;
 		}
 		.about{
 			padding: 10%;
@@ -104,7 +114,7 @@ p.fadeIn span:nth-of-type(4){
 			margin:auto;
 			padding:5%;
 			height:auto;
-			border: 6px solid #dfd71aff;
+			border: 20px solid #dfd71aff;
 			background-color: white;
 		}
 		h1{
@@ -114,7 +124,7 @@ p.fadeIn span:nth-of-type(4){
 		}
 		h2{
 			font-family: 'Abril Fatface', cursive;
-			font-size: 15px;
+			font-size: 12px;
 			font-weight: bold;
 			color: black;
 		}
@@ -142,10 +152,230 @@ p.fadeIn span:nth-of-type(4){
 }
 .coltext{
 	text-align:left;
-	font-size:1.5vw;
+	font-size:2vw;
+	margin-top: 100px;
+}
+.footer{
+	min-height: 400px;
 }
 
-/*fireworks*/
+/*menu*/
+
+:root {
+  --primary-color: #dfd71aff;
+  --overlay-color: rgba(44,71,13,.9);
+  --menu-speed: 0.75s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+}*/
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 3rem;
+}
+
+.showcase {
+  background: var(--primary-color);
+  color: #fff;
+  height: 100vh;
+  position: relative;
+}
+
+.showcase:before {
+  content: '';
+  background: url('https://images.pexels.com/photos/533923/pexels-photo-533923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.showcase .showcase-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.showcase h1 {
+  font-size: 4rem;
+}
+
+.showcase p {
+  font-size: 1.3rem;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  transition: opacity 1s ease-in-out;
+  text-decoration: none;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+/* MENU STYLES */
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.menu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hamburger Line */
+.menu-wrap .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger Lines - Top & Bottom */
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+/* Moves Line Down */
+.menu-wrap .hamburger > div::after {
+  top: 10px;
+}
+
+/* Toggler Animation */
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+/* Turns Lines Into X */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Rotate On Hover When Checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* Show Menu */
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition:  opacity 0.4s ease 0.4s;
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .menu > div {
+  background: var(--overlay-color);
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
 
 
 
@@ -168,9 +398,32 @@ p.fadeIn span:nth-of-type(4){
 <section class="top"> 
 	<div class="top-insert">
 	<div style="text-align:left; margin-top:15%">
-	<p style="font-size:1em;padding:20px;margin-left:-50px">Menu-></p>
+	<p style="font-size:1em;padding:20px;margin-left:-50px">
+		
+<!-- mmenu -->
+<div class="menu-wrap">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger"><div></div></div>
+    <div class="menu">
+      <div>
+        <div>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- end menu -->
+
+
+	</p>
 </div>
-	<p class="fadeIn fade-box">
+	<p class="fadeIn fade-box" >
   <span>We</span>
   <span>get</span>
   <span>art</span>
@@ -184,10 +437,10 @@ p.fadeIn span:nth-of-type(4){
 
 <section class="about">
 	<div class="row">
-<div class="col">
-  <h2 style="margin-top:150px; padding:20px;">	WE'RE A UNIQUE PLATFORM THAT BRINGS ART TO THE PUBLIC in unexpected ways. WE COLLABORATE WITH TALENTED LOCAL ARTISTS, TRANSFORM PACKAGING INTO CAPTIVATING MINI GALLERYS while <br>PROMOTING <br>THE <br>ARTISTS. </h2>
+<div class="col-sm">
+  <p style="margin-top:50px; padding:20px;color:white">	WE'RE A UNIQUE PLATFORM THAT BRINGS ART TO THE PUBLIC in unexpected ways. WE COLLABORATE WITH TALENTED LOCAL ARTISTS, TRANSFORM PACKAGING INTO CAPTIVATING MINI GALLERYS while <br>PROMOTING <br>THE <br>ARTISTS. </p>
 </div>
-<div class="col">
+<div class="col-sm">
   <img src="qr-code.svg" style="width:90%;border:15px solid white">
 </div> 
 </div>
@@ -195,8 +448,8 @@ p.fadeIn span:nth-of-type(4){
 
 <section class="bottom align-middle"> 
 <div class="row">
-	<div class="col"><img src="prototype.png" style="width:100%;"></div>
-<div class="col coltext"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <br><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+	<div class="col-sm"><img src="prototype.png" style="width:100%;"></div>
+<div class="col-sm coltext"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <br></div>
 </div>
 
 </section>
