@@ -43,10 +43,8 @@ $lime-green: #4ad13fff;
 	width: 100%;
 	height: 100%;
 }*/
-.fade-box {
-	margin-top:35%;
-  margin-right:5%;
-}
+
+
 /*text fadein*/
 p.fadeIn span{
   opacity: 0;
@@ -75,30 +73,31 @@ p.fadeIn span:nth-of-type(4){
 }
 /*end fadein*/
 		.top{
-			
-			
 			min-height:80vw;
 			padding:10px;
-			text-align: center;
+			text-align: left;
+      padding-left:50px;
 			background-repeat: no-repeat;
-  background-size: 100%;
-
-  background: rgb(255,255,255);
-			background: linear-gradient(275deg, rgba(255,255,255,1) 50%, rgba(242,40,197,1) 100%);
+      background-size: 100%;
+      background: rgb(242,37,130,1);
+/*    			background: linear-gradient(275deg, rgba(255,255,255,1) 50%, rgba(242,37,130,1) 100%);*/
 
 		}
 		.top span{
 			color: black;
 		}
+    .home{
+
+    }
 		.top-insert{
-			background-image: url("BlastSVGcolor.png");
-			min-height:80vw;
+			background-image: url("svgBlast.png");
+			min-height:100vw;
 			padding:0px;
 			padding-left:0px;
 			text-align: center;
 			background-repeat: no-repeat;
   background-size: 100%;
-  margin-left: 70px;
+  margin-left: 20px;
   margin-top: 0px;
 		}
 		.about{
@@ -114,7 +113,7 @@ p.fadeIn span:nth-of-type(4){
 			margin:auto;
 			padding:5%;
 			height:auto;
-			border: 20px solid #dfd71aff;
+			border: 20px solid rgb(36,176,11,1);
 			background-color: white;
 		}
 		h1{
@@ -163,7 +162,7 @@ p.fadeIn span:nth-of-type(4){
 
 :root {
   --primary-color: #dfd71aff;
-  --overlay-color: rgba(44,71,13,.9);
+  --overlay-color: rgb(36,176,11,.8);
   --menu-speed: 0.75s;
 }
 
@@ -262,7 +261,8 @@ p.fadeIn span:nth-of-type(4){
   width: 60px;
   height: 60px;
   padding: 1rem;
-  background: var(--primary-color);
+/*  background: var(--primary-color);*/
+background:transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -274,7 +274,7 @@ p.fadeIn span:nth-of-type(4){
   flex: none;
   width: 100%;
   height: 2px;
-  background: #fff;
+  background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -396,12 +396,8 @@ p.fadeIn span:nth-of-type(4){
 
 
 <section class="top"> 
-	<div class="top-insert">
-	<div style="text-align:left; margin-top:5%">
-	<p style="font-size:1em;padding:20px;margin-left:-50px">
-		
-<!-- mmenu -->
-<div class="menu-wrap">
+<!-- menu -->
+<div class="menu-wrap" style="margin-bottom:2%;">
     <input type="checkbox" class="toggler">
     <div class="hamburger"><div></div></div>
     <div class="menu">
@@ -420,28 +416,29 @@ p.fadeIn span:nth-of-type(4){
 
 <!-- end menu -->
 
-
-	</p>
-</div>
-	<p class="fadeIn fade-box" >
-  <span>We</span>
-  <span>get</span>
-  <span>art</span>
-  <span>around</span>
-
-</p>
+<div class="home" style="margin-top:0%;margin-left:0">
+  <img src="svgBlast.png" style="width:100%;margin-left:5%">
+	<p class="fadeIn fade-box" style="margin-top:5%;">
+  <span>Applifying</span>
+  <span>local</span>
+  <!-- <span>art</span> -->
+  <span>creatives</span>
+  </p>
 	<p><i class="arrow down"></i></p>
 </div>
+
 </section>
 
 
+
+<!-- about -->
 <section class="about">
 	<div class="row">
 <div class="col-sm">
   <p style="margin-top:50px; padding:20px;color:white">	WE'RE A UNIQUE PLATFORM THAT BRINGS ART TO THE PUBLIC in unexpected ways. WE COLLABORATE WITH TALENTED LOCAL ARTISTS, TRANSFORM PACKAGING INTO CAPTIVATING MINI GALLERYS while <br>PROMOTING <br>THE <br>ARTISTS. </p>
 </div>
 <div class="col-sm">
-  <img src="qr-code.svg" style="width:90%;border:15px solid white">
+  <img src="qr-code.svg" style="width:100%;border:15px solid white">
 </div> 
 </div>
 </section>
