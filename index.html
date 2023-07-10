@@ -457,14 +457,17 @@ textarea {
 
 /* Begin Right Contact Page */
 .direct-contact-container {
-  max-width: 400px;
+  width: 100%;
 }
 
 /* Location, Phone, Email Section */
 .contact-list {
   list-style-type: none;
-  margin-left: -30px;
-  padding-right: 20px;
+  /*margin-left: -30px;
+  padding-right: 20px;*/
+}
+.contact-list ul{
+  width:100%;
 }
 
 .list-item {
@@ -717,7 +720,7 @@ hr {
   
   <!-- Left contact page --> 
     
-    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xdorokrg" method="post" style="color:black; width:50%; text-align:center;">
+    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xdorokrg" method="post" style="color:black; width:100%; text-align:center;">
   <fieldset id="fs-frm-inputs">
     <label for="full-name">Full Name</label>
     <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
@@ -727,7 +730,7 @@ hr {
     <textarea rows="5" name="message" id="message" placeholder="Message here..." required=""></textarea>
     <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
   </fieldset>
-  <input type="submit" value="Submit" style="background-color:rgb(242,37,130,1);">
+  <input type="submit" value="Submit" style="background-color:rgb(242,37,130,1); color:white;">
 </form><style>/* reset */
 #fs-frm input,
 #fs-frm select,
