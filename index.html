@@ -662,10 +662,10 @@ hr {
       <div>
         <div>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -674,7 +674,7 @@ hr {
 
 <!-- end menu -->
 
-<div class="home" style="margin-top:0%;margin-left:0">
+<div class="home" id="home" style="margin-top:0%;margin-left:0">
   <img src="blastForSvg.png" style="width:100%;margin-left:.5%;overflow:hidden;">
 	<p class="fadeIn fade-box" style="margin-top:-20%;">
   <span>Applifying</span>
@@ -690,14 +690,26 @@ hr {
 
 
 <!-- about -->
-<section class="about">
+<section class="about" id="about">
 	<div class="row">
 <div class="col-sm">
-  <p style="margin-top:50px; padding:20px;color:white; font-family:abril fatface;text-align:justify-left;">	WE'RE A UNIQUE PLATFORM THAT BRINGS ART TO THE PUBLIC IN UNEXPECTED WAYS. WE COLLABORATE WITH TALENTED LOCAL ARTISTS, TRANSFORM PACKAGING INTO CAPTIVATING MINI GALLERIES WHILE <span style="color: rgba(36,176,11)">PROMOTING THE ARTISTS</span></p>
+  <p id="about" style="margin-top:50px; padding:20px;color:white; font-family:abril fatface;text-align:justify-left;">	WE'RE A UNIQUE PLATFORM THAT BRINGS ART TO THE PUBLIC IN UNEXCEPTED WAYS. WE COLLABORATE WITH TALENTED LOCAL ARTISTS, TRANSFORM PACKAGING INTO CAPTIVATING MINI GALLERYS WHILE <span style="color: rgba(36,176,11)">PROMOTING THE ARTISTS</span></p>
 </div>
-<div class="col-sm" style="text-align:center;">
+<div class="col-sm" style="text-align:center; ">
   <img src="qr-code.svg" style="width:70%;border:15px solid white">
 </div> 
+
+<!-- contact form -->
+
+<!-- Begin Constant Contact Inline Form Code -->
+<div class="ctct-inline-form" data-form-id="5bb67a1d-24eb-4239-8618-7eedeabeb1bb"></div>
+<!-- End Constant Contact Inline Form Code -->
+
+<!-- end contact form -->
+
+
+
+
 </div>
 </section>
 
@@ -707,7 +719,10 @@ hr {
 	<div class="col-sm"><img src="prototype.png" style="width:100%;">Illustration: Marine Penvern</div>
 
 
-<div class="col-sm coltext align-items-center" style="font-family:abril fatface; font-size:large; text-align:justify"><p>Our innovative company specializes in distributing custom coffee cup sleeves that showcase and promote local artists within the cozy ambiance of local coffee shops and cafes. The trajectory of the coffee market continues to ascend, fueled by expanding consumption in emerging markets, the relentless pursuit of premium experiences, and the soaring demand for organic and fairly traded products. </p><p> We're combining the evergreen appeal of coffee with the magnetic allure of local artistry--all while promoting local artists and their works. Join us as we revolutionize advertising for art, branding, and creating a visual feast for the eyes and a stimulating experience for coffee lovers everywhere. </p> <br></div>
+<div id="services" class="col-sm coltext align-items-center" style="font-family:abril fatface; font-size:large; text-align:justify"><p>Our innovative company specializes in distributing custom coffee cup sleeves that showcase and promote local artists within the cozy ambiance of local coffee shops and cafes. The trajectory of the coffee market continues to ascend, fueled by expanding consumption in emerging markets, the relentless pursuit of premium experiences, and the soaring demand for organic and fairly traded products. </p><p> We're combining the evergreen appeal of coffee with the magnetic allure of local artistry--all while promoting local artists and their works. Join us as we revolutionize advertising for art, branding, and creating a visual feast for the eyes and a stimulating experience for coffee lovers everywhere. </p> <br><button style="background-color: rgb(242,37,130,1);border-radius:4px;border:1px solid black;padding:5px;color:white;">Online Gallery</button></div>
+
+
+
 </div>
 
 </section>
@@ -847,7 +862,7 @@ hr {
         <ul class="contact-list">
           <li class="list-item"><i class="bi bi-geo"></i><span class="contact-text place">Hudson, NY</span></i></li>
           
-          <li class="list-item"><i class="bi bi-telephone"></i><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">(212) 555-5555</a></span></i></li>
+         
           
           
         </ul>
@@ -873,7 +888,15 @@ hr {
   
 </section>  
   
+<!-- CC script -->
 
+<!-- Begin Constant Contact Active Forms -->
+<!-- Begin Constant Contact Active Forms -->
+<script> var _ctct_m = "d369ee4188e1c10fcd00c91ff1d4b297"; </script>
+<script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+<!-- End Constant Contact Active Forms -->
+<!-- End Constant Contact Active Forms -->
+<!-- end CC script -->
 
 </body>
 <script>
@@ -886,40 +909,6 @@ hr {
 
 </script>
 
-<!-- contact form -->
-
-<script>
-    var form = document.getElementById("my-form");
-    
-    async function handleSubmit(event) {
-      event.preventDefault();
-      var status = document.getElementById("my-form-status");
-      var data = new FormData(event.target);
-      fetch(event.target.action, {
-        method: form.method,
-        body: data,
-        headers: {
-            'Accept': 'application/json'
-        }
-      }).then(response => {
-        if (response.ok) {
-          status.innerHTML = "Thanks for your submission!";
-          form.reset()
-        } else {
-          response.json().then(data => {
-            if (Object.hasOwn(data, 'errors')) {
-              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-            } else {
-              status.innerHTML = "Oops! There was a problem submitting your form"
-            }
-          })
-        }
-      }).catch(error => {
-        status.innerHTML = "Oops! There was a problem submitting your form"
-      });
-    }
-    form.addEventListener("submit", handleSubmit)
-</script>
 
 
 </html>
